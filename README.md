@@ -2,9 +2,9 @@
 Setting up a LAPACK source debug environment on linux. Short demonstration of tutorial steps and debugging at [youtube (no audio)](https://www.youtube.com/watch?v=0eoKoBbCug8)
 
 ## Requirements
-1. **gfortran**
+1. **gfortran** and **gcc**
 	```shell
-	sudo apt install gfortran
+	sudo apt install gfortran gcc
 	```
 2. **GDB**
 	```shell
