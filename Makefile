@@ -1,7 +1,7 @@
 # variables
 FC=gfortran
 CFLAGS=-c -g -Og -Wall
-FFLAGS=-L/home/pato/src/lia/lapack -llapack -lrefblas
+FFLAGS=-L/home/pato/src/lapack -llapack -lrefblas
 # linking
 a.out: main.o
 	$(FC) main.o $(FFLAGS)

@@ -38,11 +38,17 @@ Setting up a LAPACK source debug environment on linux.
 	code lapack-debug # this opens visual studio code in this folder
 	```
 
-4. Install VSCode extensions:
+4. Modify [`Makefile`](./Makefile#L4) FFLAG variable so that you include the path of your LAPACK installation (from step 2.) For example, if you had installed it in `/home/steve/lapack` you will modify the FFLAG line to:
+	```makefile
+	FFLAGS=-L/home/steve/lapack -llapack -lrefblas
+	```
+	Remember not to remove the first `-L` letter!
+
+5. Install VSCode extensions:
 	* Install **C/C++** extension by Microsoft (go to rubiks cube icon in VSCode)
 	* Install **Fortran Breakpoint Support** by _ekibun_
 
-5. Place a breakpoint somewhere in [`main.f90`](./main.f90). Press F5. This will run the **Run GDB** launch configuration in [`launch.json`](.vscode/launch.json), which includes linking and compiling your program. You may now debug. See [this youtube video](https://www.youtube.com/watch?v=XuNjA230e3k) for more guidance on debugging fortran.
+6. Place a breakpoint somewhere in [`main.f90`](./main.f90). Press F5. This will run the **Run GDB** launch configuration in [`launch.json`](.vscode/launch.json), which includes linking and compiling your program. You may now debug. See [this youtube video](https://www.youtube.com/watch?v=XuNjA230e3k) for more guidance on debugging fortran.
 
 ## What program does
 This program solves the following system of equations using LAPACK's single-precision solver `SGESV`:
