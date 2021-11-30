@@ -1,5 +1,5 @@
 # lapack-debug
-Setting up a LAPACK source debug environment on linux.
+Setting up a LAPACK source debug environment on linux. Short demonstration of tutorial steps and debugging at [youtube (no audio)](https://www.youtube.com/watch?v=0eoKoBbCug8)
 
 ## Requirements
 1. **gfortran**

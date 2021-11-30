@@ -9,7 +9,6 @@ program main
     real :: b (n) ! B matrix
     real :: pivot(n)
     real :: rc ! return code
-    
     a = reshape([2., 1., -1., &
     & -3., -1., 2., &
         -2., 1., 2.], [3, 3])
